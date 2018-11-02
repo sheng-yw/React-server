@@ -15,6 +15,21 @@ const userSchema = new Schema({
   type:{
     type: String,
     require: true
+  },
+  header:{
+    type: String
+  },
+  job:{
+    type: String
+  },
+  salary:{
+    type: String
+  },
+  company:{
+    type: String
+  },
+  info:{
+    type: String,
   }
 });
 

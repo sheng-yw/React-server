@@ -44,4 +44,18 @@ router.post('/register', async (req, res)=>{
   }
 });
 
+router.post('/updateUser', async (req, res)=>{
+  const {id, salary, company, job, info, header} = req.body;
+  try {
+    await User.findByIdAndUpdate(id, {salary, company, job, info,header});
+    res.json(new Params(0, '更新成功'));
+  } catch (e) {
+    res.json(new Params(1, '网络故障'));
+  }
+
+});
+
+
+
+
 module.exports = router;
